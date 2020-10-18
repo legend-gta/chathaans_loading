@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="LoadingScreen pour Smoothness">
+        <meta name="keywords" content="HTML,CSS,Loading,Smoothness">
+        <meta name="author" content="Mahesvara">
+        <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport">
+        
+        <title>CHAATHANS - LOADING...</title>
+
+        <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+        </style>
+
+        <div id="background">
+
+        <div>
+        
+        <h1><b>CHAATHANS</b></h1><br>
+        <h2>CHAATHANS ARE HERE...</h2>
+        
+        </div>
+
+        <img src="loading.gif" class="loading" alt="loading">
+
+        <audio autoplay="" id="Loading" loop=""><source src="Loading.ogg" type="audio/ogg" />
+            <source src="Loading.ogg" type="audio/ogg">
+        </audio>
+        <script>
+            var vid = document.getElementById("Loading");
+            vid.volume = 0.3;
+            window.addEventListener('keyup', function(e)
+            {
+                if (e.which == 69){
+                    vid.volume = Math.min(vid.volume + 0.1,1);
+                } else if(e.which == 65){
+                    vid.volume = Math.max(vid.volume - 0.1,0);
+                };
+            });
+        </script>
+    </body>
+</html>
